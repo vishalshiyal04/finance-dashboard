@@ -135,7 +135,7 @@ Click the **Sun/Moon icon** in the top-right header to toggle between Light and 
 
 ## 📜 License
 
-This project is created for **educational and evaluation purposes**.
+This project is created for **educational and evaluation purposes as part of a frontend development assignment**.
 
 ---
 
