@@ -1,4 +1,4 @@
-# 💰 FinBoard Pro — Finance Dashboard UI
+# 💰 Finance Dashboard UI
 
 > A clean, interactive, and responsive finance dashboard built with **React** and **Tailwind CSS**. Track financial activity, view transaction history, and monitor market trends in real-time.
 
