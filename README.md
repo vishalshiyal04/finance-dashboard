@@ -1,4 +1,4 @@
-# 💰 Finance Dashboard UI
+# 💰Finance Dashboard UI
 
 > A clean, interactive, and responsive finance dashboard built with **React** and **Tailwind CSS**. Track financial activity, view transaction history, and monitor market trends in real-time.
 
@@ -15,8 +15,15 @@
 
 ### 2. Transaction Management
 - **Interactive Table** — View all transactions with Date, Description, Category, and Amount.
-- **Search & Filter** — Real-time search bar and dropdown filters for transaction types.
-- **Sorting** — Clickable headers to sort by Date, Category, or Amount.
+- **Search & Sort** — Real-time search bar and sortable columns (Date, Category, Amount).
+- **Advanced Filtering:**
+  - Filter by Type (Income / Expense)
+  - Filter by Category
+  - Filter by Date Range (Start Date to End Date)
+- **Grouping** — Group transactions by Category or Type for better organization.
+- **Export Functionality:**
+  - 📄 Download filtered data as **CSV** for spreadsheet use.
+  - 🗂️ Download filtered data as **JSON** for data backup or API use.
 
 ### 3. Role-Based Access Control (RBAC)
 The application simulates two user roles:
@@ -68,7 +75,6 @@ src/
 │   └── Transactions/   # Table, Forms
 ├── context/            # AppContext for Global State (Auth, Theme, Data)
 ├── data/               # Mock data generators
-├── utils/              # Helper functions (formatCurrency, formatDate)
 ├── App.jsx             # Main Application Component
 ├── main.jsx            # Entry Point
 └── index.css           # Tailwind CSS directives
@@ -97,7 +103,6 @@ npm install
 
 **3. Start the development server**
 ```bash
-First For :-
 cd finance-dashboard
 npm run dev
 ```
@@ -120,10 +125,21 @@ Click the **Sun/Moon icon** in the top-right header to toggle between Light and 
    - **Pass:** `admin123`
 3. Once logged in, the **Add Transaction** button appears and Action columns (Edit/Delete) become visible.
 
-### Adding a Transaction
-1. Click **Add Transaction**.
-2. Fill in the details (Type, Date, Amount, Category, Description).
-3. Click **Submit** — the table updates instantly.
+### Using Advanced Filters & Grouping
+1. Click the **"Advanced"** button in the transaction table toolbar.
+2. Select a **Category** or set a **Date Range** to filter the list.
+3. Use the **Grouping dropdown** (default: "No Grouping") to select:
+   - `Group by Category`
+   - `Group by Type`
+4. Click **"Clear Filters"** to reset the view.
+
+### Exporting Data
+1. Apply any filters or search terms if needed.
+2. Click the **"Export"** button in the top right of the transaction table.
+3. Select:
+   - **CSV** — for Excel / Google Sheets
+   - **JSON** — for developers / backup
+4. The file will automatically download to your computer.
 
 ---
 
@@ -132,6 +148,7 @@ Click the **Sun/Moon icon** in the top-right header to toggle between Light and 
 1. **Simulated Market Data** — Free stock market APIs often have CORS restrictions, so market footer data is simulated to create realistic "ticking" behavior. It accurately reflects Indian Market hours (IST).
 2. **Local Storage** — All transaction data is stored in the browser's Local Storage to avoid the need for a backend database.
 3. **Frontend RBAC** — Role-Based Access Control is handled entirely on the frontend for demonstration purposes.
+4. **Export Format** — CSV exports follow standard formatting, escaping quotes where necessary to ensure compatibility with major spreadsheet software.
 
 ---
 
