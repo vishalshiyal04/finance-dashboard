@@ -97,6 +97,8 @@ npm install
 
 **3. Start the development server**
 ```bash
+First For :-
+cd finance-dashboard
 npm run dev
 ```
 
